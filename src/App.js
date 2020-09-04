@@ -1,5 +1,12 @@
 import React from 'react';
 import './App.css';
+import Header from './Components/Header';
+import Button from './Components/Button';
+import Plug from './Components/Plug';
+import LoopColumn from './Components/LoopColumn';
+import { FiHeadphones } from 'react-icons/fi';
+import { IoMdPlay, IoMdPause } from 'react-icons/io';
+import { FaRandom } from 'react-icons/fa';
 
 function App() {
   return (
@@ -7,21 +14,34 @@ function App() {
       <Header />
       <div className='row'>
         <div className='buttons'>
-          <Button>Share</Button>
-          <Button>Save</Button>
+          <Button className='pop-out standard-button' title='Save' />
+          <Button className='pop-out standard-button' title='Share' />
         </div>
-        <div className='plugs'>
+        <div className='side-container'>
+          <div className='play-buttons'>
+            <Button className='pop-out player-button' title={<FiHeadphones/>}/>
+            <Button className='pop-out player-button' title={<IoMdPause/>}/>
+            <Button className='pop-out player-button' title={<IoMdPlay/>}/>
+            <Button className='pop-out player-button' title={<FaRandom/>}/>
+          </div>
+          <div className='plugs'>
           <Plug></Plug>
           <Plug></Plug>
           <Plug></Plug>
           <Plug></Plug>
           <Plug></Plug>
+          </div>
         </div>
       </div>
-      <div className='row'>
-        <BeatHolder></BeatHolder>
-        <BeatHolder></BeatHolder>
-        <BeatHolder></BeatHolder>
+      <div className='loops-container'>
+        <LoopColumn/>
+        <LoopColumn />
+        <LoopColumn />
+        <LoopColumn />
+        <LoopColumn />
+        <LoopColumn />
+        <LoopColumn />
+        <LoopColumn />
       </div>
     </div>
   );
