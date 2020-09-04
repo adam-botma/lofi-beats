@@ -1,3 +1,106 @@
-.container {
-  color: blue;
+:root{
+  --main-text-color: #686868;
+  --main-background-color: #E6E9EF;
+}
+
+.row{
+  display: flex;
+}
+
+/* HEADER */
+.hamburger {
+  height: 30px;
+  width: 30px;
+  color: var(--main-text-color);
+}
+
+/* NEO EFFECT */
+.pop-out{
+  background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
+  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 5px 5px 10px rgba(166, 180, 200, 0.75);
+  border: none;
+}
+
+.push-in{
+  background: linear-gradient(134.17deg, #EEF1F5 4.98%, #E6E9EF 94.88%);
+box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.75), inset 5px 5px 10px rgba(166, 180, 200, 0.75);
+border: none;
+}
+
+/* SAVE/SHARE SECTION */
+
+.buttons{
+
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.standard-button{
+  color: var(--main-text-color);
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+  text-align: left;
+}
+
+.standard-button > p {
+  padding-left: 20px;
+}
+
+/* PLAYER BUTTONS */
+
+.side-container{
+  width: 100%;
+}
+
+.play-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-button{
+  height: 2.5rem;
+  width: 2.6rem;
+  border-radius: 10px;
+  margin: 5px;
+  color: var(--main-text-color);
+}
+
+/* PLUG SECTION */
+
+.plugs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plug{
+  height: 90px;
+  width: 90px;
+  border-radius: 25px;
+  margin: 10px 20px;
+}
+
+/* LOOP COLUMN */
+
+.loops-container{
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.loop-column{
+  width: 140px;
+  height: 480px;
+}
+
+.loop{
+   height: 90px;
+  width: 90px;
+  border-radius: 25px;
+  margin: 30px;
 }
