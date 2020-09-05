@@ -12,36 +12,37 @@ function App() {
   return (
     <div className='container'>
       <Header />
-      <div className='row'>
-        <div className='buttons'>
-          <Button className='pop-out standard-button' title='Save' />
-          <Button className='pop-out standard-button' title='Share' />
-        </div>
-        <div className='side-container'>
-          <div className='play-buttons'>
-            <Button className='pop-out player-button' title={<FiHeadphones/>}/>
-            <Button className='pop-out player-button' title={<IoMdPause/>}/>
-            <Button className='pop-out player-button' title={<IoMdPlay/>}/>
-            <Button className='pop-out player-button' title={<FaRandom/>}/>
+      <div className='board'>
+        <div className='row'>
+          <div className='buttons'>
+            {/* <Button className='pop-out standard-button' title='Save' />
+          <Button className='pop-out standard-button' title='Share' />*/}
           </div>
-          <div className='plugs'>
-          <Plug></Plug>
-          <Plug></Plug>
-          <Plug></Plug>
-          <Plug></Plug>
-          <Plug></Plug>
+          <div className='side-container'>
+            <div className='play-buttons'>
+              <Button className='pop-out player-button' title={<FiHeadphones />} />
+              <Button className='pop-out player-button' title={<IoMdPause />} />
+              <Button className='pop-out player-button' title={<IoMdPlay />} />
+              <Button className='pop-out player-button' title={<FaRandom />} />
+            </div>
+            <div className='plugs'>
+              <Plug></Plug>
+              <Plug></Plug>
+              <Plug></Plug>
+              <Plug></Plug>
+              <Plug></Plug>
+            </div>
           </div>
         </div>
-      </div>
-      <div className='loops-container'>
-        <LoopColumn/>
-        <LoopColumn />
-        <LoopColumn />
-        <LoopColumn />
-        <LoopColumn />
-        <LoopColumn />
-        <LoopColumn />
-        <LoopColumn />
+        <div className='loops-container'>
+          <LoopColumn />
+          <LoopColumn />
+          <LoopColumn />
+          <LoopColumn />
+          <LoopColumn />
+          <LoopColumn />
+
+        </div>
       </div>
     </div>
   );

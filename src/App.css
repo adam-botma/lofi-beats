@@ -3,6 +3,13 @@
   --main-background-color: #E6E9EF;
 }
 
+.board{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .row{
   display: flex;
 }
@@ -88,9 +95,11 @@ border: none;
 /* LOOP COLUMN */
 
 .loops-container{
-  margin-top: 3rem;
+  margin: 3rem ;
   display: flex;
   justify-content: space-between;
+  max-width: 1200px;
+
 }
 
 .loop-column{
