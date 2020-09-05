@@ -15,6 +15,18 @@
 }
 
 /* HEADER */
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text{
+  color: var(--main-text-color);
+
+
+}
+
 .hamburger {
   height: 30px;
   width: 30px;
@@ -112,4 +124,13 @@ border: none;
   width: 90px;
   border-radius: 25px;
   margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loop-title{
+  color: var(--main-text-color);
+  height: 35px;
+  width: 35px;
 }

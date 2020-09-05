@@ -7,7 +7,13 @@ body {
 
 }
 
+@font-face {
+  font-family: 'coders-gotta-code';
+  src: local('coders-gotta-code'), url(./assets/fonts/Coders-gotta-code.ttf) format('ttf');
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'coders-gotta-code', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    letter-spacing: 3px;
 }

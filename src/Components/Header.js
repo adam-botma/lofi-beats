@@ -5,6 +5,7 @@ const Header = () => {
   return (
     <header>
       <FiMenu className='hamburger' />
+      <code className='logo-text'>lofi-code</code>
     </header>
   )
 }

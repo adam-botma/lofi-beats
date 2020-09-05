@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Loop = () => {
+const Loop = (props) => {
   return (
-    <div className='loop pop-out'></div>
+  <div className='loop pop-out'>{props.title}</div>
   )
 }
 
