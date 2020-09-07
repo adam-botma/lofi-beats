@@ -3,12 +3,12 @@ import Loop from './Loop';
 import { FaRecordVinyl } from 'react-icons/fa';
 
 
-const LoopColumn = () => {
+const LoopColumn = (props) => {
   return (
     <div className='loop-column'>
-      <Loop></Loop>
-      <Loop></Loop>
-      <Loop title={<FaRecordVinyl className='loop-title'/>}></Loop>
+      {props.loops.map((loop, index) => {
+        return <Loop key={loop.id} loop={loop} index={index} />
+      })}
     </div>
   )
 }
