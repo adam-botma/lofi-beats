@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from './Components/Header';
 import Button from './Components/Button';
 import Plug from './Components/Plug';
 import LoopColumn from './Components/LoopColumn';
+import { DragDropContext } from 'react-beautiful-dnd'
 import { FiHeadphones } from 'react-icons/fi';
 import { IoMdPlay, IoMdPause } from 'react-icons/io';
 import { FaRandom } from 'react-icons/fa';
+import initialData from './data/initial-data';
 
 function App() {
+const [loops, setLoop] = useState(initialData.loops);
+const [columns, setColumn] = useState(initialData.columns);
+const [columnOrder , setColumnOrder] = useState(initialData.columnOrder);
+
+const onDragEnd = () => {
+  console.log("we're draggin");
+}
+
   return (
     <div className='container'>
       <Header />
+      <DragDropContext onDragEnd={onDragEnd}>
       <div className='board'>
         <div className='row'>
           <div className='buttons'>
@@ -35,15 +46,16 @@ function App() {
           </div>
         </div>
         <div className='loops-container'>
-          <LoopColumn />
-          <LoopColumn />
-          <LoopColumn />
-          <LoopColumn />
-          <LoopColumn />
-          <LoopColumn />
+          {columnOrder.map(columnId=> {
+            const column = columns[columnId];
+            const theLoops = column.loopIds.map(loopId => loops[loopId]);
+
+            return <LoopColumn key={column.id} column={column} loops={theLoops} />
+          })}
 
         </div>
       </div>
+      </DragDropContext>
     </div>
   );
 }
