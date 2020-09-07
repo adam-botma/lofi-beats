@@ -27,7 +27,25 @@ const initialData = {
     'column-5': { id: 'column-5', loopIds: ['loop-13', 'loop-14', 'loop-15'], },
     'column-6': { id: 'column-6', loopIds: ['loop-16', 'loop-17', 'loop-18'], },
   },
-  columnOrder: ['column-1', 'column-2', 'column-3', 'column-4', 'column-5', 'column-6']
+  columnOrder: ['column-1', 'column-2', 'column-3', 'column-4', 'column-5', 'column-6'],
+  plugs: [
+    {
+      title: 'plug-1',
+      hasLoop: false
+    },
+    {
+      title: 'plug-2',
+      hasLoop: false
+    },
+    {
+      title: 'plug-3',
+      hasLoop: false
+    },
+    {
+      title: 'plug-4',
+      hasLoop: false
+    }
+  ]
 }
 
 export default initialData;

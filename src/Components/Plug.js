@@ -2,10 +2,12 @@ import React from 'react';
 import { useDrop } from 'react-dnd';
 import { ItemTypes } from './ItemTypes';
 
-const Plug = () => {
+
+const Plug = (props) => {
+
   const [, drop] = useDrop({
     accept: ItemTypes.LOOP,
-    drop: () => console.log('we dropped baby!'),
+    drop: (item) => props.onDropEnd(props.plug.title, item),
     collect: monitor => ({isOver: !!monitor.isOver(),
     }),
   })

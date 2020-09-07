@@ -15,6 +15,13 @@ function App() {
   const [loops, setLoop] = useState(initialData.loops);
   const [columns, setColumn] = useState(initialData.columns);
   const [columnOrder, setColumnOrder] = useState(initialData.columnOrder);
+  const [plugs, setPlug] = useState(initialData.plugs);
+
+  const onDropEnd = (target, item) => {
+    console.log(`dropped into ${target}`);
+    console.log( `item that was dropped: ${item}`)
+
+  }
 
   return (
     <div className='container'>
@@ -34,11 +41,9 @@ function App() {
               <Button className='pop-out player-button' title={<FaRandom />} />
             </div>
             <div className='plugs'>
-              <Plug></Plug>
-              <Plug></Plug>
-              <Plug></Plug>
-              <Plug></Plug>
-              <Plug></Plug>
+                {plugs.map(plug => <Plug key={plug.title} plug={plug} onDropEnd={onDropEnd}></Plug> )}
+
+
             </div>
           </div>
         </div>
